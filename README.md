@@ -5,14 +5,14 @@
 
 1. Install dependencies:
    
-    'npm install'
+    `npm install`
     
 
 2. Set up environment variables:
 
 3. Start the server:
    
-    npm start
+    `npm start`
  
 
 
@@ -53,7 +53,7 @@
 ### RSVP Endpoints
 
 - **RSVP to Event**
-  - `POST /api/events/:id/rsvp`
+  - `POST /api/rsvps/:id/rsvp`
 
 - **Get User's RSVP Events**
-  - `GET /api/users/my-events`
+  - `GET /api/rsvps/myevents`
