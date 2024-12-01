@@ -5,7 +5,7 @@
 
 1. Install dependencies:
    
-    npm install
+    'npm install'
     
 
 2. Set up environment variables:
