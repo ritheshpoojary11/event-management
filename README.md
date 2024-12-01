@@ -1,28 +1,5 @@
-# Event Management API
+# Event Management REST API
 
-A RESTful API built with Node.js and MongoDB to create, manage, and RSVP to events.
-
-## Features
-
-- User Authentication (Sign Up, Login) using JWT
-- CRUD Operations for Events (Create, Read, Update, Delete)
-- RSVP System for Events
-- Event Filtering by Date and Location
-
-## Technologies Used
-
-- **Node.js** with **Express.js**: Backend Framework
-- **MongoDB** with **Mongoose**: Database
-- **JSON Web Token (JWT)**: Authentication
-- **dotenv**: Environment Variable Management
-- **cors**: Cross-Origin Resource Sharing
-- **Postman**: API Testing
-
----
-
-## Installation
-
-Follow these steps to set up and run the project on your local machine.
 
 ### Prerequisites
 
