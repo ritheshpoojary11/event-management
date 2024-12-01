@@ -11,9 +11,9 @@
 2. Set up environment variables:
 
 3. Start the server:
-    ```bash
+   
     npm start
-    ```
+ 
 
 
 
