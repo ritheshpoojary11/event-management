@@ -19,6 +19,7 @@ exports.createEvent = async (req, res) => {
     }
 };
 
+//Fetch the Events
 exports.getAllEvents = async (req, res) => {
     try {
         const { location, date } = req.query;
@@ -33,6 +34,8 @@ exports.getAllEvents = async (req, res) => {
     }
 };
 
+
+//Fetch Event Using id
 exports.getEventById = async (req, res) => {
     try {
         const event = await Event.findById(req.params.id);
@@ -43,6 +46,7 @@ exports.getEventById = async (req, res) => {
     }
 };
 
+//update the Event
 exports.updateEvent = async (req, res) => {
     try {
         const event = await Event.findById(req.params.id);
@@ -59,6 +63,7 @@ exports.updateEvent = async (req, res) => {
     }
 };
 
+//Delete the Evant
 exports.deleteEvent = async (req, res) => {
     try {
         console.log('Delete request received for Event ID:', req.params.id);
@@ -85,7 +90,7 @@ exports.deleteEvent = async (req, res) => {
         }
 
         // Delete the event
-        await Event.deleteOne({ _id: req.params.id }); // Replace `remove` with `deleteOne`
+        await Event.deleteOne({ _id: req.params.id });
         console.log('Event deleted successfully for ID:', req.params.id);
 
         res.json({ message: 'Event deleted successfully' });

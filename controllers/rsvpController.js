@@ -15,7 +15,7 @@ exports.rsvpToEvent = async (req, res) => {
 
         // Check if user has already RSVP'd
         if (event.attendees.includes(req.user.id)) {
-            return res.status(400).json({ message: 'You have already RSVP’d to this event' });
+            return res.status(400).json({ message: 'You have already RSVP’d(Attended) to this event' });
         }
 
         // Add the user to the attendees list
@@ -30,13 +30,14 @@ exports.rsvpToEvent = async (req, res) => {
     }
 };
 
+// Fetch all events where the user is an attendee
 exports.getUserRSVPs = async (req, res) => {
     try {
-        // Fetch all events where the user is an attendee
+        
         const events = await Event.find({ attendees: req.user.id });
         res.json(events);
     } catch (error) {
-        console.error('Error fetching user RSVPs:', error); // Log the error for debugging
+        console.error('Error fetching user RSVPs:', error);
         res.status(500).json({ message: 'Server Error', error });
     }
 };
